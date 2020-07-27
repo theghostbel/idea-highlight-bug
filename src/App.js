@@ -7,9 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Text data={{value: 'Hi all!'}}/>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -24,3 +22,10 @@ function App() {
 }
 
 export default App;
+
+const Text = (props) => {
+  const { data } = props;
+  return (
+    <p>{data.value}</p>
+  );
+};
